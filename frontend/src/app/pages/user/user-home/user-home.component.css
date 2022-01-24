@@ -1,0 +1,56 @@
+.example-ripple-container {
+    cursor: pointer;
+    text-align: center;
+  
+    width: 150px;
+    height: 150px;
+    line-height: 150px;
+  
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+  
+    -webkit-user-drag: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.example-viewport {
+  height: 400px;
+  width: 400px;
+  border: 1px solid white; 
+}
+
+.profile-image{
+  max-width: 200px;
+  max-height: 150px;
+  /* border: 1px solid black; */
+  border-radius: 50%;
+}
+
+.example-header-image {
+  background-image: url('https://image.flaticon.com/icons/png/512/327/327010.png');
+  background-size: cover;
+}
+
+.truncate{
+  display: block;
+  white-space: nowrap;
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.ver-div{
+  background-color: gray;
+  width: 1px;
+  height: 20px;
+}
+  
+.feed:active{
+  transform: translateY(4px);
+}
+
+.card:hover{
+  background-color: #69F0AE;
+}
