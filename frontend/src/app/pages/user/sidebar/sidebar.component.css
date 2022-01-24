@@ -1,0 +1,19 @@
+.example-viewport {
+    height: 200px;
+    width: 200px;
+    border: 1px solid black;
+}
+  
+.example-item {
+    height: 50px; 
+}
+
+.user-sidebar{
+    position: sticky;
+    top: 0;
+    /* background-color: #69F0AE; */
+}
+
+.all:hover{
+    color: white;
+}
