@@ -1,0 +1,198 @@
+<div class="bootstrap-wrapper">
+    <div class="container">
+        <div class="row mt10">
+            <div class="col-md-12">
+                <mat-card class="maincard">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="container text-center">
+                                <img src="../../../../assets/defaultUser.jpg" [src]="retrievedImage" alt="" class="profile-image">
+
+                                <input type="file" name="" id="profile" style="display: none; visibility: none;"
+                                    accept="image/*" (change)="onFileChanged($event)">
+
+                                <span>
+
+                                    <p class="mt10">
+
+                                        <span style="color: black; font-size: 24px; text-transform: uppercase;"><b>{{user.firstName}}
+                                                {{user.lastName}}</b></span><br>
+                                        <span style="color: black; font-size: 12px; text-transform: uppercase;"><samp>Hello
+                                                {{user.firstName}}, how you doin?</samp></span>
+                                    </p>
+                                    <label class="imglink" for="profile">Change Profile
+                                        Picture</label>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <span>
+                                        <h2>User ID</h2>
+                                    </span>
+                                </div>
+                                <div class="col-md-6" dir="rtl">
+                                    <span>
+                                        <h2>CQ_{{user.id}}</h2>
+                                    </span>
+                                </div>
+                            </div>
+                            <mat-divider></mat-divider>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <span>
+                                        <h2>Username</h2>
+                                    </span>
+                                </div>
+                                <div class="col-md-6" dir="rtl">
+                                    <span>
+                                        <h2>{{user.username}}</h2>
+                                    </span>
+                                </div>
+                            </div>
+                            <mat-divider></mat-divider>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <span>
+                                        <h2>Mobile Number</h2>
+                                    </span>
+                                </div>
+                                <div class="col-md-6" dir="rtl">
+                                    <span>
+                                        <h2 *ngIf="user.phone">{{user.phone}}</h2>
+                                        <h2 *ngIf="!user.phone">9834808052</h2>
+                                    </span>
+                                </div>
+                            </div>
+                            <mat-divider></mat-divider>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <span>
+                                        <h2>Email</h2>
+                                    </span>
+                                </div>
+                                <div class="col-md-6" dir="rtl">
+                                    <span>
+                                        <h2>{{user.email}}</h2>
+                                    </span>
+                                </div>
+                            </div>
+                            <mat-divider></mat-divider>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <span>
+                                        <h2>Authority</h2>
+                                    </span>
+                                </div>
+                                <div class="col-md-6" dir="rtl">
+                                    <span>
+                                        <h2>{{user.authorities[0].authority}}</h2>
+                                    </span>
+                                </div>
+                            </div>
+                            <mat-divider></mat-divider>
+                        </div>
+                    </div>
+                </mat-card>
+            </div>
+        </div>
+        <div class="row mt10">
+            <div class="col-md-4">
+                <mat-card class="cards">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="col-md-4 offset-md-4">
+                                <img class="img" src="../../../../assets/attempts.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row" style="margin-top: 8px;">
+                        <div class="col-md-12">
+                            <div class="example-ripple-container mat-elevation-z4" matRipple
+                                routerLink="/user-dashboard/user-home">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <span>
+                                            <p class="mt20">
+                                                <span
+                                                    style="color: black; font-size: 20px; text-transform: uppercase;"><b>ALL
+                                                        Attempts</b></span><br>
+                                                <span
+                                                    style="color: black; font-size: 10px; text-transform: uppercase;"><samp>view
+                                                        records of your attempted quizzes.</samp></span>
+                                            </p>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </mat-card>
+            </div>
+            <div class="col-md-4">
+                <mat-card class="cards">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="col-md-4 offset-md-4">
+                                <img class="img" src="../../../../assets/quizLogo.webp" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row" style="margin-top: 8px;">
+                        <div class="col-md-12">
+                            <div class="example-ripple-container mat-elevation-z4" matRipple
+                                routerLink="/user-dashboard/0">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <span>
+                                            <p class="mt20">
+                                                <span
+                                                    style="color: black; font-size: 20px; text-transform: uppercase;"><b>Quizzes</b></span><br>
+                                                <span
+                                                    style="color: black; font-size: 10px; text-transform: uppercase;"><samp>goto
+                                                        quizzes and start attempting it.</samp></span>
+                                            </p>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </mat-card>
+            </div>
+            <div class="col-md-4">
+                <mat-card class="cards">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="col-md-4 offset-md-4">
+                                <img class="img" src="../../../../assets/contactus.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row" style="margin-top: 8px;">
+                        <div class="col-md-12">
+                            <div class="example-ripple-container mat-elevation-z4" matRipple>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <span>
+                                            <p class="mt20">
+                                                <span
+                                                    style="color: black; font-size: 20px; text-transform: uppercase;"><b>contacts
+                                                        us</b></span><br>
+                                                <span
+                                                    style="color: black; font-size: 10px; text-transform: uppercase;"><samp><a
+                                                            href="mailto:jacksparrow9824@gmail.com">Want some help?
+                                                            contact us here..</a></samp></span>
+                                            </p>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </mat-card>
+            </div>
+        </div>
+    </div>
+</div>
